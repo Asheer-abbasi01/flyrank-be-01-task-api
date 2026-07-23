@@ -179,12 +179,9 @@ Swagger UI allows you to:
 
 ---
 
-## 📷 Swagger UI Screenshot
+## 📷 Swagger UI
 
 ![Swagger UI](assets/swagger.PNG)
-```
-
----
 
 ## 📌 Notes
 
