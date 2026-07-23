@@ -196,7 +196,7 @@ Swagger UI allows you to:
 **Asheer Hadayat**
 
 - GitHub: https://github.com/Asheer-abbasi01
-- LinkedIn: *(Add your LinkedIn profile here if you'd like.)*
+- LinkedIn: https://www.linkedin.com/in/hashir-abbasi-01a27a302
 
 ---
 
