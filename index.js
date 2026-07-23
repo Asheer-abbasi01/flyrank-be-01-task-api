@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+app.use(express.json());
+
 const PORT = 3000;
 
 const tasks = [
@@ -48,6 +50,26 @@ app.get('/tasks/:id', function (req, res) {
         })
     }
     });
+
+
+
+app.post('/tasks', function (req, res) {
+
+    console.log(req.body); 
+    const newTask = {
+        id: tasks.length + 1,
+        title: req.body.title,
+        done: false
+    }
+
+    tasks.push(newTask);
+
+    res.status(201).json( {
+        message: 'Task is created successfully',
+        task: newTask
+
+    })
+})
 
 app.listen(PORT, function (err) {
     if (err) console.log(err);
