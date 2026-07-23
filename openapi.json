@@ -3,30 +3,54 @@
   "info": {
     "title": "Tasks API",
     "version": "1.0.0",
-    "description": "Simple CRUD API for tasks"
+    "description": "Simple CRUD API for managing tasks."
   },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
   "paths": {
     "/tasks": {
       "get": {
         "summary": "Get all tasks",
         "responses": {
           "200": {
-            "description": "List of tasks"
+            "description": "List of all tasks"
           }
         }
       },
       "post": {
         "summary": "Create a new task",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "example": "Learn Swagger"
+                  }
+                },
+                "required": [
+                  "title"
+                ]
+              }
+            }
+          }
+        },
         "responses": {
           "201": {
-            "description": "Task created"
+            "description": "Task created successfully"
           }
         }
       }
     },
     "/tasks/{id}": {
       "get": {
-        "summary": "Get task by ID",
+        "summary": "Get a task by ID",
         "parameters": [
           {
             "name": "id",
@@ -34,7 +58,8 @@
             "required": true,
             "schema": {
               "type": "integer"
-            }
+            },
+            "example": 1
           }
         ],
         "responses": {
@@ -55,12 +80,40 @@
             "required": true,
             "schema": {
               "type": "integer"
-            }
+            },
+            "example": 1
           }
         ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "example": "Master Express"
+                  },
+                  "done": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                },
+                "required": [
+                  "title",
+                  "done"
+                ]
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
-            "description": "Task updated"
+            "description": "Task updated successfully"
+          },
+          "404": {
+            "description": "Task not found"
           }
         }
       },
@@ -73,12 +126,16 @@
             "required": true,
             "schema": {
               "type": "integer"
-            }
+            },
+            "example": 1
           }
         ],
         "responses": {
           "204": {
-            "description": "Task deleted"
+            "description": "Task deleted successfully"
+          },
+          "404": {
+            "description": "Task not found"
           }
         }
       }
