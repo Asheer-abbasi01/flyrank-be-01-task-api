@@ -1,4 +1,4 @@
-# 🚀 Tasks API
+#  Tasks API
 
 A simple RESTful CRUD API built with **Node.js** and **Express.js** as part of the **FlyRank Backend AI Engineering Internship (Week 2 - BE-01)**.
 
@@ -8,14 +8,14 @@ The API manages an in-memory to-do list and demonstrates the complete **CRUD (Cr
 
 ## ✨ Features
 
-- ✅ Get all tasks
-- ✅ Get a task by ID
-- ✅ Create a new task
-- ✅ Update an existing task
-- ✅ Delete a task
-- ✅ Input validation
-- ✅ Proper HTTP status codes
-- ✅ Interactive Swagger UI documentation
+-  Get all tasks
+-  Get a task by ID
+-  Create a new task
+-  Update an existing task
+-  Delete a task
+-  Input validation
+-  Proper HTTP status codes
+-  Interactive Swagger UI documentation
 
 ---
 
@@ -92,7 +92,6 @@ http://localhost:3000
 | Method | Endpoint | Description |
 |---------|----------|-------------|
 | GET | `/` | API information |
-| GET | `/health` | Health check |
 | GET | `/tasks` | Get all tasks |
 | GET | `/tasks/:id` | Get a task by ID |
 | POST | `/tasks` | Create a new task |
@@ -182,18 +181,7 @@ Swagger UI allows you to:
 
 ## 📷 Swagger UI Screenshot
 
-> Add your Swagger UI screenshot here after completing the project.
-
-Example:
-
-```
-images/swagger-ui.png
-```
-
-or
-
-```markdown
-![Swagger UI](images/swagger-ui.png)
+![Swagger UI](assets/swagger.PNG)
 ```
 
 ---
